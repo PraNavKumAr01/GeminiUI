@@ -61,13 +61,11 @@ def main():
             # Generate content using prompt and image
             try:
                 result = generate_content(prompt, img)
+                # Display the generated content
+                st.subheader("Generated Content:")
+                st.write(result)
             except Exception as e:
                 print("File size exceeded (Max Size : 20MB)")
-
-            # Display the generated content
-            st.subheader("Generated Content:")
-            st.write(result)
-
 
 # Run the Streamlit app
 if __name__ == "__main__":
