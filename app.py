@@ -1,3 +1,6 @@
+import os
+os.environ['GOOGLE_API_KEY'] = st.secrets['apikey']
+
 import streamlit as st
 from PIL import Image
 import google.generativeai as genai
