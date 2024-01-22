@@ -8,7 +8,6 @@ import google.generativeai as genai
 # Function to generate content using the model
 def generate_content(user_prompt, image):
     model = genai.GenerativeModel('gemini-pro-vision')
-    model = genai.GenerativeModel('gemini-pro-vision')
     response = model.generate_content([user_prompt, image], stream=True)
     response.resolve()
     return response.text
