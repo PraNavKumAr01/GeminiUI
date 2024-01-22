@@ -1,7 +1,3 @@
-import os
-
-os.environ['GOOGLE_API_KEY'] = "AIzaSyC9L2qLCTWBeQ9J2odAMz-yjXq3DzP6oOg"
-
 import streamlit as st
 from PIL import Image
 import google.generativeai as genai
