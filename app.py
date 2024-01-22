@@ -8,9 +8,15 @@ import google.generativeai as genai
 # Function to generate content using the model
 def generate_content(user_prompt, image):
     model = genai.GenerativeModel('gemini-pro-vision')
-    response = model.generate_content([user_prompt, image], stream=True)
-    response.resolve()
-    return response.text
+    try:
+        response = model.generate_content([prompt, image], stream=True)
+        response.resolve()
+        result = response.text
+    except Exception as e:
+        # Handle the exception when an error occurs
+        result = "Image size exceeded (Max Size : 20MB)"
+        
+    return result
 
 
 def generate_text(user_prompt):
