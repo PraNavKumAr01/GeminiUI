@@ -60,7 +60,10 @@ def main():
             img = Image.open(uploaded_image)
 
             # Generate content using prompt and image
-            result = generate_content(prompt, img)
+            try:
+                result = generate_content(prompt, img)
+            except Exception as e:
+                print("File size exceeded (Max Size : 20MB)")
 
             # Display the generated content
             st.subheader("Generated Content:")
