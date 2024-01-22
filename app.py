@@ -65,7 +65,7 @@ def main():
                 st.subheader("Generated Content:")
                 st.write(result)
             except Exception as e:
-                print("File size exceeded (Max Size : 20MB)")
+                st.subheader("File size exceeded (Max Size : 20MB)")
 
 # Run the Streamlit app
 if __name__ == "__main__":
